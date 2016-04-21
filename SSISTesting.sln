@@ -3,15 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "SSISTesting", "SSISTesting\SSISTesting.dtproj", "{C3601A2F-C7E6-4DCD-9816-8105C0A24833}"
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "LyndaLabStart", "LyndaLab\LyndaLabStart.dtproj", "{575C5AB6-853A-4AF2-AD21-B71053417F62}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "LyndaLabDataFlow", "LyndaLabDataFlow\LyndaLabDataFlow.dtproj", "{F348BD70-BAD4-4B76-AC67-DED3415B6CEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Development|Default = Development|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C3601A2F-C7E6-4DCD-9816-8105C0A24833}.Development|Default.ActiveCfg = Development
-		{C3601A2F-C7E6-4DCD-9816-8105C0A24833}.Development|Default.Build.0 = Development
+		{575C5AB6-853A-4AF2-AD21-B71053417F62}.Development|Default.ActiveCfg = Development
+		{575C5AB6-853A-4AF2-AD21-B71053417F62}.Development|Default.Build.0 = Development
+		{F348BD70-BAD4-4B76-AC67-DED3415B6CEF}.Development|Default.ActiveCfg = Development
+		{F348BD70-BAD4-4B76-AC67-DED3415B6CEF}.Development|Default.Build.0 = Development
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

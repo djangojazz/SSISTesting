@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Demonstration"
+  DTS:DTSID="{FF62CC05-232B-4164-8E05-0008598BA4ED}"
+  DTS:CreationName="ADO.NET:SQL">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=.\SQL2016;Initial Catalog=Demonstration;Integrated Security=True;Connect Timeout=30;Application Name=SSIS-{FF62CC05-232B-4164-8E05-0008598BA4ED}Demonstration;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
