@@ -7,6 +7,12 @@ Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "LyndaLabStart", "LyndaLab\L
 EndProject
 Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "LyndaLabDataFlow", "LyndaLabDataFlow\LyndaLabDataFlow.dtproj", "{F348BD70-BAD4-4B76-AC67-DED3415B6CEF}"
 EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "LyndaVariables", "LyndaVariables\LyndaVariables.dtproj", "{C001C092-F63E-4923-B218-D27D4CBEDCD7}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "LyndaJoins", "LyndaJoins\LyndaJoins.dtproj", "{8DA1A9D2-8F32-4050-B7FC-41F5F9DC5C87}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "LyndaDebugging", "LyndaDebugging\LyndaDebugging.dtproj", "{C7A88553-E671-4BBA-8D57-AE1586188F6B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Development|Default = Development|Default
@@ -16,6 +22,12 @@ Global
 		{575C5AB6-853A-4AF2-AD21-B71053417F62}.Development|Default.Build.0 = Development
 		{F348BD70-BAD4-4B76-AC67-DED3415B6CEF}.Development|Default.ActiveCfg = Development
 		{F348BD70-BAD4-4B76-AC67-DED3415B6CEF}.Development|Default.Build.0 = Development
+		{C001C092-F63E-4923-B218-D27D4CBEDCD7}.Development|Default.ActiveCfg = Development
+		{C001C092-F63E-4923-B218-D27D4CBEDCD7}.Development|Default.Build.0 = Development
+		{8DA1A9D2-8F32-4050-B7FC-41F5F9DC5C87}.Development|Default.ActiveCfg = Development
+		{8DA1A9D2-8F32-4050-B7FC-41F5F9DC5C87}.Development|Default.Build.0 = Development
+		{C7A88553-E671-4BBA-8D57-AE1586188F6B}.Development|Default.ActiveCfg = Development
+		{C7A88553-E671-4BBA-8D57-AE1586188F6B}.Development|Default.Build.0 = Development
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

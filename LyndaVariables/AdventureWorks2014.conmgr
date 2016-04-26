@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="AdventureWorks2014"
+  DTS:DTSID="{E69941D0-0E1E-47F3-BF22-915FAF6664C1}"
+  DTS:CreationName="ADO.NET:SQL">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=.;Initial Catalog=AdventureWorks2014;Integrated Security=True;Connect Timeout=30;Application Name=SSIS-{E69941D0-0E1E-47F3-BF22-915FAF6664C1}AdventureWorks2014;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
