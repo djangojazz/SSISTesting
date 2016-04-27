@@ -1,0 +1,561 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/26/2016 4:26:11 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="IT-BMORIN-D"
+  DTS:CreatorName="PACSEAFOOD\bmorin"
+  DTS:DTSID="{D8919C77-C219-43D6-B9F7-EA9EE915A6BD}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="13.0.1400.361"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="XMLSource"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{00D2261E-E569-40CF-BD1F-E8F67C389FB4}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DF XML Source"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{52640C14-DEDF-4C6F-9834-4812DC4BCACC}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DF XML Source"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DF XML Source\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[CdCatalog]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DF XML Source\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{7F4907AA-FC9B-422B-AF93-90610BE56D26}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLE Demonstration]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DF XML Source\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF XML Source\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TITLE]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="TITLE"
+                      externalMetadataColumnId="Package\DF XML Source\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TITLE]"
+                      lineageId="Package\DF XML Source\XML Source.Outputs[CD].Columns[TITLE]" />
+                    <inputColumn
+                      refId="Package\DF XML Source\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ARTIST]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ARTIST"
+                      externalMetadataColumnId="Package\DF XML Source\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ARTIST]"
+                      lineageId="Package\DF XML Source\XML Source.Outputs[CD].Columns[ARTIST]" />
+                    <inputColumn
+                      refId="Package\DF XML Source\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[COUNTRY]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="COUNTRY"
+                      externalMetadataColumnId="Package\DF XML Source\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COUNTRY]"
+                      lineageId="Package\DF XML Source\XML Source.Outputs[CD].Columns[COUNTRY]" />
+                    <inputColumn
+                      refId="Package\DF XML Source\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[COMPANY]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="COMPANY"
+                      externalMetadataColumnId="Package\DF XML Source\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COMPANY]"
+                      lineageId="Package\DF XML Source\XML Source.Outputs[CD].Columns[COMPANY]" />
+                    <inputColumn
+                      refId="Package\DF XML Source\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PRICE]"
+                      cachedDataType="decimal"
+                      cachedName="PRICE"
+                      cachedScale="10"
+                      externalMetadataColumnId="Package\DF XML Source\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PRICE]"
+                      lineageId="Package\DF XML Source\XML Source.Outputs[CD].Columns[PRICE]" />
+                    <inputColumn
+                      refId="Package\DF XML Source\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[YEAR]"
+                      cachedDataType="ui2"
+                      cachedName="YEAR"
+                      externalMetadataColumnId="Package\DF XML Source\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[YEAR]"
+                      lineageId="Package\DF XML Source\XML Source.Outputs[CD].Columns[YEAR]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DF XML Source\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TITLE]"
+                      dataType="wstr"
+                      length="255"
+                      name="TITLE" />
+                    <externalMetadataColumn
+                      refId="Package\DF XML Source\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ARTIST]"
+                      dataType="wstr"
+                      length="255"
+                      name="ARTIST" />
+                    <externalMetadataColumn
+                      refId="Package\DF XML Source\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COUNTRY]"
+                      dataType="wstr"
+                      length="255"
+                      name="COUNTRY" />
+                    <externalMetadataColumn
+                      refId="Package\DF XML Source\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COMPANY]"
+                      dataType="wstr"
+                      length="255"
+                      name="COMPANY" />
+                    <externalMetadataColumn
+                      refId="Package\DF XML Source\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PRICE]"
+                      dataType="numeric"
+                      name="PRICE"
+                      precision="28"
+                      scale="10" />
+                    <externalMetadataColumn
+                      refId="Package\DF XML Source\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[YEAR]"
+                      dataType="i4"
+                      name="YEAR" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF XML Source\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DF XML Source\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF XML Source\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF XML Source\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF XML Source\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF XML Source\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF XML Source\XML Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Extracts data from an XML file. For example, extract catalog data from an XML file that represents catalogs and catalog items. Before using, specify the schema and generate an output for each XML element.;Microsoft Corporation;Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Extracts data from an XML file. For example, extract catalog data from an XML file that represents catalogs and catalog items. Before using, specify the schema and generate an output for each XML element."
+              name="XML Source"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.XmlSourceAdapter</property>
+                <property
+                  dataType="System.String"
+                  description="The XML data used by the XML source adapter."
+                  expressionType="Notify"
+                  name="XMLData">D:\GitCode\SSISTesting\DemoData\cd_catalog.xml</property>
+                <property
+                  dataType="System.String"
+                  description="The variable used by the XML source adapter to specify XML data."
+                  name="XMLDataVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Defines how the XML source adapter gets XML data."
+                  name="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The XML schema definition used by the XML source adapter."
+                  expressionType="Notify"
+                  name="XMLSchemaDefinition">D:\GitCode\SSISTesting\DemoData\cd_catalog.xsd</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Identifies whether or not to use inline schema."
+                  name="UseInlineSchema">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Defines how XML integer types are mapped."
+                  name="XMLIntegerMapping"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.XmlSourceAdapter+XMLIntegerMappingConverter">0</property>
+              </properties>
+              <outputs>
+                <output
+                  refId="Package\DF XML Source\XML Source.Outputs[CD]"
+                  name="CD">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Identifies the rowset associated with the output."
+                      name="RowsetID">CD</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF XML Source\XML Source.Outputs[CD].Columns[TITLE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF XML Source\XML Source.Outputs[CD].ExternalColumns[TITLE]"
+                      length="255"
+                      lineageId="Package\DF XML Source\XML Source.Outputs[CD].Columns[TITLE]"
+                      name="TITLE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF XML Source\XML Source.Outputs[CD].Columns[ARTIST]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF XML Source\XML Source.Outputs[CD].ExternalColumns[ARTIST]"
+                      length="255"
+                      lineageId="Package\DF XML Source\XML Source.Outputs[CD].Columns[ARTIST]"
+                      name="ARTIST"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF XML Source\XML Source.Outputs[CD].Columns[COUNTRY]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF XML Source\XML Source.Outputs[CD].ExternalColumns[COUNTRY]"
+                      length="255"
+                      lineageId="Package\DF XML Source\XML Source.Outputs[CD].Columns[COUNTRY]"
+                      name="COUNTRY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF XML Source\XML Source.Outputs[CD].Columns[COMPANY]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF XML Source\XML Source.Outputs[CD].ExternalColumns[COMPANY]"
+                      length="255"
+                      lineageId="Package\DF XML Source\XML Source.Outputs[CD].Columns[COMPANY]"
+                      name="COMPANY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF XML Source\XML Source.Outputs[CD].Columns[PRICE]"
+                      dataType="decimal"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF XML Source\XML Source.Outputs[CD].ExternalColumns[PRICE]"
+                      lineageId="Package\DF XML Source\XML Source.Outputs[CD].Columns[PRICE]"
+                      name="PRICE"
+                      scale="10"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF XML Source\XML Source.Outputs[CD].Columns[YEAR]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF XML Source\XML Source.Outputs[CD].ExternalColumns[YEAR]"
+                      lineageId="Package\DF XML Source\XML Source.Outputs[CD].Columns[YEAR]"
+                      name="YEAR"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DF XML Source\XML Source.Outputs[CD].ExternalColumns[TITLE]"
+                      dataType="wstr"
+                      length="255"
+                      name="TITLE">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DF XML Source\XML Source.Outputs[CD].ExternalColumns[ARTIST]"
+                      dataType="wstr"
+                      length="255"
+                      name="ARTIST">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DF XML Source\XML Source.Outputs[CD].ExternalColumns[COUNTRY]"
+                      dataType="wstr"
+                      length="255"
+                      name="COUNTRY">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DF XML Source\XML Source.Outputs[CD].ExternalColumns[COMPANY]"
+                      dataType="wstr"
+                      length="255"
+                      name="COMPANY">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DF XML Source\XML Source.Outputs[CD].ExternalColumns[PRICE]"
+                      dataType="decimal"
+                      name="PRICE"
+                      scale="10">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.Decimal</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DF XML Source\XML Source.Outputs[CD].ExternalColumns[YEAR]"
+                      dataType="ui2"
+                      name="YEAR">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.UInt16</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DF XML Source\XML Source.Outputs[CD Error Output]"
+                  isErrorOut="true"
+                  name="CD Error Output">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Identifies the rowset associated with the output."
+                      name="RowsetID">CD</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF XML Source\XML Source.Outputs[CD Error Output].Columns[TITLE]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\DF XML Source\XML Source.Outputs[CD Error Output].ExternalColumns[TITLE]"
+                      lineageId="Package\DF XML Source\XML Source.Outputs[CD Error Output].Columns[TITLE]"
+                      name="TITLE" />
+                    <outputColumn
+                      refId="Package\DF XML Source\XML Source.Outputs[CD Error Output].Columns[ARTIST]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\DF XML Source\XML Source.Outputs[CD Error Output].ExternalColumns[ARTIST]"
+                      lineageId="Package\DF XML Source\XML Source.Outputs[CD Error Output].Columns[ARTIST]"
+                      name="ARTIST" />
+                    <outputColumn
+                      refId="Package\DF XML Source\XML Source.Outputs[CD Error Output].Columns[COUNTRY]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\DF XML Source\XML Source.Outputs[CD Error Output].ExternalColumns[COUNTRY]"
+                      lineageId="Package\DF XML Source\XML Source.Outputs[CD Error Output].Columns[COUNTRY]"
+                      name="COUNTRY" />
+                    <outputColumn
+                      refId="Package\DF XML Source\XML Source.Outputs[CD Error Output].Columns[COMPANY]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\DF XML Source\XML Source.Outputs[CD Error Output].ExternalColumns[COMPANY]"
+                      lineageId="Package\DF XML Source\XML Source.Outputs[CD Error Output].Columns[COMPANY]"
+                      name="COMPANY" />
+                    <outputColumn
+                      refId="Package\DF XML Source\XML Source.Outputs[CD Error Output].Columns[PRICE]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\DF XML Source\XML Source.Outputs[CD Error Output].ExternalColumns[PRICE]"
+                      lineageId="Package\DF XML Source\XML Source.Outputs[CD Error Output].Columns[PRICE]"
+                      name="PRICE" />
+                    <outputColumn
+                      refId="Package\DF XML Source\XML Source.Outputs[CD Error Output].Columns[YEAR]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\DF XML Source\XML Source.Outputs[CD Error Output].ExternalColumns[YEAR]"
+                      lineageId="Package\DF XML Source\XML Source.Outputs[CD Error Output].Columns[YEAR]"
+                      name="YEAR" />
+                    <outputColumn
+                      refId="Package\DF XML Source\XML Source.Outputs[CD Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF XML Source\XML Source.Outputs[CD Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF XML Source\XML Source.Outputs[CD Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF XML Source\XML Source.Outputs[CD Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DF XML Source\XML Source.Outputs[CD Error Output].ExternalColumns[TITLE]"
+                      dataType="nText"
+                      name="TITLE" />
+                    <externalMetadataColumn
+                      refId="Package\DF XML Source\XML Source.Outputs[CD Error Output].ExternalColumns[ARTIST]"
+                      dataType="nText"
+                      name="ARTIST" />
+                    <externalMetadataColumn
+                      refId="Package\DF XML Source\XML Source.Outputs[CD Error Output].ExternalColumns[COUNTRY]"
+                      dataType="nText"
+                      name="COUNTRY" />
+                    <externalMetadataColumn
+                      refId="Package\DF XML Source\XML Source.Outputs[CD Error Output].ExternalColumns[COMPANY]"
+                      dataType="nText"
+                      name="COMPANY" />
+                    <externalMetadataColumn
+                      refId="Package\DF XML Source\XML Source.Outputs[CD Error Output].ExternalColumns[PRICE]"
+                      dataType="nText"
+                      name="PRICE" />
+                    <externalMetadataColumn
+                      refId="Package\DF XML Source\XML Source.Outputs[CD Error Output].ExternalColumns[YEAR]"
+                      dataType="nText"
+                      name="YEAR" />
+                  </externalMetadataColumns>
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DF XML Source.Paths[CD]"
+              endId="Package\DF XML Source\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="CD"
+              startId="Package\DF XML Source\XML Source.Outputs[CD]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\DF XML Source"
+          TopLeft="55.5,47.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DF XML Source">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="189,42"
+          Id="Package\DF XML Source\XML Source"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\DF XML Source\OLE DB Destination"
+          TopLeft="12.5,186.5" />
+        <EdgeLayout
+          Id="Package\DF XML Source.Paths[CD]"
+          TopLeft="99,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,139"
+              Start="0,0"
+              End="0,131.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,131.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DF XML Source\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
