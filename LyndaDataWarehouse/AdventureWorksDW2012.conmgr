@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="AdventureWorksDW2012"
+  DTS:DTSID="{6ED44996-E4A3-4D96-8BF8-46E2611E2109}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=IT-BMORIN-D;Initial Catalog=AdventureWorksDW2012;Integrated Security=True;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

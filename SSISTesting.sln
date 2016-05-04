@@ -15,6 +15,8 @@ Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "LyndaDebugging", "LyndaDebu
 EndProject
 Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "LyndaXML", "LyndaXML\LyndaXML.dtproj", "{6FF55A71-3FE8-49E4-B513-CC9757A84455}"
 EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "LyndaDataWarehouse", "LyndaDataWarehouse\LyndaDataWarehouse.dtproj", "{4C20644D-13A0-46A1-A178-76E78C561975}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Development|Default = Development|Default
@@ -32,6 +34,8 @@ Global
 		{C7A88553-E671-4BBA-8D57-AE1586188F6B}.Development|Default.Build.0 = Development
 		{6FF55A71-3FE8-49E4-B513-CC9757A84455}.Development|Default.ActiveCfg = Development
 		{6FF55A71-3FE8-49E4-B513-CC9757A84455}.Development|Default.Build.0 = Development
+		{4C20644D-13A0-46A1-A178-76E78C561975}.Development|Default.ActiveCfg = Development
+		{4C20644D-13A0-46A1-A178-76E78C561975}.Development|Default.Build.0 = Development
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
