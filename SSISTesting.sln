@@ -19,6 +19,8 @@ Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "LyndaDataWarehouse", "Lynda
 EndProject
 Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "LyndaDWHCube", "LyndaDWHCube\LyndaDWHCube.dwproj", "{D4DCF29B-508F-4856-BD56-91D6CACDAF17}"
 EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "SSISGenericTesting", "SSISGenericTesting\SSISGenericTesting.dtproj", "{4014B8D9-F08D-4374-BA9E-B04C1A5E74EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Development|Default = Development|Default
@@ -41,6 +43,8 @@ Global
 		{D4DCF29B-508F-4856-BD56-91D6CACDAF17}.Development|Default.ActiveCfg = Development
 		{D4DCF29B-508F-4856-BD56-91D6CACDAF17}.Development|Default.Build.0 = Development
 		{D4DCF29B-508F-4856-BD56-91D6CACDAF17}.Development|Default.Deploy.0 = Development
+		{4014B8D9-F08D-4374-BA9E-B04C1A5E74EF}.Development|Default.ActiveCfg = Development
+		{4014B8D9-F08D-4374-BA9E-B04C1A5E74EF}.Development|Default.Build.0 = Development
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
